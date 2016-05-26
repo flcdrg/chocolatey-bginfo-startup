@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bginfo-startup</id>
-    <version>0.1.0-beta</version>
+    <version>1.0.0-beta</version>
     <packageSourceUrl>https://github.com/flcdrg/chocolatey-bginfo-startup</packageSourceUrl>
     <owners>flcdrg</owners>
 
@@ -21,8 +21,8 @@
     <tags>bginfo</tags>
     <summary>Configure BGInfo to run when user logs in</summary>
     <description>Installs a custom.bgi file and creates a shortcut in the StartUp folder so that bginfo.exe will be run on user login.
-	
-	#### Package Parameters
+
+#### Package Parameters
 The following package parameters can be set:
 
  * `/RunImmediately` - run BGInfo using the custom.bgi file immediately (rather than waiting until next user login)

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>bginfo-startup</id>
+    <version>0.1.0-beta</version>
+    <packageSourceUrl>https://github.com/flcdrg/chocolatey-bginfo-startup</packageSourceUrl>
+    <owners>flcdrg</owners>
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Run BGInfo at startup</title>
+    <authors>David Gardiner</authors>
+    <projectUrl>https://github.com/flcdrg/chocolatey-bginfo-startup</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/39f15aca092eb7040b8478d0c604fa61c76d38cc/icons/bginfo.png</iconUrl>
+    <copyright>2016 David Gardiner</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/flcdrg/chocolatey-bginfo-startup/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/flcdrg/chocolatey-bginfo-startup</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/flcdrg/chocolatey-bginfo-startup/issues</bugTrackerUrl>
+    <tags>bginfo</tags>
+    <summary>Configure BGInfo to run when user logs in</summary>
+    <description>Installs a custom.bgi file and creates a shortcut in the StartUp folder so that bginfo.exe will be run on user login.
+	
+	#### Package Parameters
+The following package parameters can be set:
+
+ * `/RunImmediately` - run BGInfo using the custom.bgi file immediately (rather than waiting until next user login)
+
+These parameters can be passed to the installer with the use of `--params`.
+For example: `--params '"/RunImmediately"'`.
+	
+	</description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <dependencies>
+      <dependency id="bginfo" version="4.21.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>

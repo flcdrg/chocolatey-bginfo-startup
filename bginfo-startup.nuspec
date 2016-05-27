@@ -4,12 +4,12 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bginfo-startup</id>
-    <version>1.0.0-beta</version>
+    <version>1.0.0</version>
     <packageSourceUrl>https://github.com/flcdrg/chocolatey-bginfo-startup</packageSourceUrl>
     <owners>flcdrg</owners>
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Run BGInfo at startup</title>
+    <title>Run BgInfo at startup</title>
     <authors>David Gardiner</authors>
     <projectUrl>https://github.com/flcdrg/chocolatey-bginfo-startup</projectUrl>
     <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/39f15aca092eb7040b8478d0c604fa61c76d38cc/icons/bginfo.png</iconUrl>
@@ -19,19 +19,22 @@
     <projectSourceUrl>https://github.com/flcdrg/chocolatey-bginfo-startup</projectSourceUrl>
     <bugTrackerUrl>https://github.com/flcdrg/chocolatey-bginfo-startup/issues</bugTrackerUrl>
     <tags>bginfo</tags>
-    <summary>Configure BGInfo to run when user logs in</summary>
-    <description>Installs a custom.bgi file and creates a shortcut in the StartUp folder so that bginfo.exe will be run on user login.
+    <summary>Configure BgInfo to run when user logs in</summary>
+    <description>Automatically run Windows Sysinternal's [BgInfo](https://technet.microsoft.com/en-us/sysinternals/bginfo.aspx) at user login.
+	
+This package installs a basic custom.bgi file and creates a shortcut in the Windows 'All Users' StartUp folder so that `bginfo.exe` will be silently run on user login.
+
+You may modify the custom.bgi file as required and it won't be overwritten by future updates.
 
 #### Package Parameters
 The following package parameters can be set:
 
- * `/RunImmediately` - run BGInfo using the custom.bgi file immediately (rather than waiting until next user login)
+ * `/RunImmediately` - run BgInfo using the custom.bgi file at package install time (rather than waiting until next user login)
 
 These parameters can be passed to the installer with the use of `--params`.
 For example: `--params '"/RunImmediately"'`.
-	
 	</description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <releaseNotes>Initial release</releaseNotes>
     <dependencies>
       <dependency id="bginfo" version="4.21.0" />
     </dependencies>
